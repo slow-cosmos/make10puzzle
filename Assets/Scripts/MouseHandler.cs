@@ -1,39 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MouseHandler : MonoBehaviour
 {
-    private Vector2 mPosCur;   // 실시간(현재 프레임) 마우스 좌표
-    private Vector2 mPosBegin; // 드래그 시작 지점 마우스 좌표
-    private Vector2 mPosMin;   // Rect의 최소 지점 좌표
-    private Vector2 mPosMax;   // Rect의 최대 지점 좌표
-    private bool showSelection;
+    [SerializeField]
+    GameObject dragSquare;
 
-    private void Update()
+    GameObject square;
+
+    Vector3 startPos, nowPos, deltaPos;
+    float deltaX, deltaY;
+    
+    void Update()
     {
-        showSelection = Input.GetMouseButton(0);
-        if (!showSelection) return;
-
-        mPosCur = Input.mousePosition;
-        mPosCur.y = Screen.height - mPosCur.y; // Y 좌표(상하) 반전
-
         if (Input.GetMouseButtonDown(0))
         {
-            mPosBegin = mPosCur;
+            startPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z * -1));
+            square = Instantiate(dragSquare, new Vector3(0, 0, 0), Quaternion.identity);
         }
 
-        mPosMin = Vector2.Min(mPosCur, mPosBegin);
-        mPosMax = Vector2.Max(mPosCur, mPosBegin);
-    }
+        if (Input.GetMouseButton(0))
+        {
+            nowPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z * -1));
+            deltaX = Mathf.Abs(nowPos.x - startPos.x);
+            deltaY = Mathf.Abs(nowPos.y - startPos.y);
+            deltaPos = startPos + (nowPos - startPos) / 2;
+            square.transform.position = deltaPos;
+            square.transform.localScale = new Vector3(deltaX,deltaY,0);
+        }
 
-    private void OnGUI()
-    {
-        if (!showSelection) return;
-        Rect rect = new Rect();
-        rect.min = mPosMin;
-        rect.max = mPosMax;
-
-        GUI.Box(rect, "");
+        if (Input.GetMouseButtonUp(0))
+        {
+            Destroy(square);
+        }
     }
 }
