@@ -50,6 +50,7 @@ public class BlockHandler : MonoBehaviour
             foreach (GameObject block in blockList)
             {
                 sum += int.Parse(block.transform.GetChild(0).gameObject.GetComponent<Text>().text);
+                block.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0);
             }
 
             Debug.Log(sum);

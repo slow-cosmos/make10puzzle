@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-
-
     public void StartButton()
     {
         SceneManager.LoadScene("Play");
+    }
+
+    public void LobbyButton()
+    {
+        SceneManager.LoadScene("Lobby");
     }
 }
