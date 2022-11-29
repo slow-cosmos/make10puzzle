@@ -17,6 +17,7 @@ public class ScoreHandler : MonoBehaviour
     void Start()
     {
         curScore = 0;
+        LoadMaxScore();
     }
 
     void Update()
@@ -29,6 +30,16 @@ public class ScoreHandler : MonoBehaviour
         {
             maxScore = curScore;
         }
+    }
+
+    public void LoadMaxScore()
+    {
+        maxScore = PlayerPrefs.GetInt("MaxScore");
+    }
+
+    public void SaveMaxScore()
+    {
+        PlayerPrefs.SetInt("MaxScore", maxScore);
     }
 
 }

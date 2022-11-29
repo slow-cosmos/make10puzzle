@@ -63,6 +63,7 @@ public class BlockHandler : MonoBehaviour
                     block.transform.GetChild(0).gameObject.GetComponent<Text>().color = new Color(0, 0, 0, 0);
                     block.GetComponent<BoxCollider>().isTrigger = false;
                     ScoreHandler.curScore++;
+                    SoundManager.Instance.SfxPlay(1,0.2f);
                     //Destroy(block);
                 }
             }

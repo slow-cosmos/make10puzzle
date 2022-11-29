@@ -12,6 +12,7 @@ public class PausePopupHandler : MonoBehaviour
         TimerHandler.stopTimer = true;
         pausePopup.SetActive(true);
         MouseHandler.mouseActive = false;
+        SoundManager.Instance.SfxPlay(0,0.2f);
     }
 
     public void PlayButton()
@@ -19,5 +20,6 @@ public class PausePopupHandler : MonoBehaviour
         TimerHandler.stopTimer = false;
         pausePopup.SetActive(false);
         MouseHandler.mouseActive = true;
+        SoundManager.Instance.SfxPlay(0,0.2f);
     }
 }

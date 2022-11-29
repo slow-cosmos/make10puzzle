@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 450099684}
   - component: {fileID: 450099686}
   - component: {fileID: 450099685}
+  - component: {fileID: 450099687}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -577,6 +578,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450099683}
   m_CullTransparentMesh: 0
+--- !u!61 &450099687
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450099683}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &464200812
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +879,7 @@ MonoBehaviour:
   timer: {fileID: 506489190}
   gameEndPopup: {fileID: 1956066130}
   gameTime: 60
+  isEnd: 0
 --- !u!114 &506489190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1651,7 @@ GameObject:
   - component: {fileID: 1304207953}
   - component: {fileID: 1304207955}
   - component: {fileID: 1304207954}
+  - component: {fileID: 1304207956}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1686,6 +1715,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304207952}
   m_CullTransparentMesh: 0
+--- !u!61 &1304207956
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304207952}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1375059347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2181,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19624422, g: 0.2179379, b: 0.2830189, a: 0}
+  m_BackGroundColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

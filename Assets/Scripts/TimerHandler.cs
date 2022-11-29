@@ -12,14 +12,19 @@ public class TimerHandler : MonoBehaviour
     GameObject gameEndPopup;
 
     public float gameTime;
-
+    public bool isEnd;
     public static bool stopTimer;
+
+    ScoreHandler scoreHandler;
 
     void Start()
     {
         stopTimer = false;
+        isEnd = false;
         timer.maxValue = gameTime;
         timer.value = gameTime;
+
+        scoreHandler = GameObject.Find("Score").GetComponent<ScoreHandler>();
     }
 
     void Update()
@@ -29,9 +34,10 @@ public class TimerHandler : MonoBehaviour
         if (time <= 0.1f)
         {
             timer.value = 0;
-            stopTimer = true;
-            gameEndPopup.SetActive(true);
-            MouseHandler.mouseActive = false;
+            if(isEnd == false)
+            {
+                EndGame();
+            }
         }
 
         if(stopTimer==false)
@@ -43,5 +49,18 @@ public class TimerHandler : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+    }
+
+    void EndGame()
+    {
+        stopTimer = true; //타이머 멈추기
+        gameEndPopup.SetActive(true); //게임 끝 팝업
+        MouseHandler.mouseActive = false; //마우스 드래그 못하게
+        scoreHandler.SaveMaxScore(); //끝났을 때 게임 저장
+        SoundManager.Instance.SfxPlay(2, 0.1f); //효과음
+
+        isEnd = true;
+
+        Debug.Log("게임 끝~");
     }
 }

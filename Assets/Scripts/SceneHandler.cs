@@ -8,10 +8,12 @@ public class SceneHandler : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene("Play");
+        SoundManager.Instance.SfxPlay(0,0.2f);
     }
 
     public void LobbyButton()
     {
         SceneManager.LoadScene("Lobby");
+        SoundManager.Instance.SfxPlay(0,0.2f);
     }
 }
