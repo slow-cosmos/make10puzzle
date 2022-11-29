@@ -58,6 +58,7 @@ public class TimerHandler : MonoBehaviour
         MouseHandler.mouseActive = false; //마우스 드래그 못하게
         scoreHandler.SaveMaxScore(); //끝났을 때 게임 저장
         SoundManager.Instance.SfxPlay(2, 0.1f); //효과음
+        SoundManager.Instance.BgmStop();
 
         isEnd = true;
 

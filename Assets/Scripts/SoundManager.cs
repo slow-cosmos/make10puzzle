@@ -42,8 +42,18 @@ public class SoundManager : MonoBehaviour
     {
         bgmAudioSource.clip = bgm;
         bgmAudioSource.loop = true;
-        bgmAudioSource.volume = 0.1f;
+        bgmAudioSource.volume = 0.05f;
         bgmAudioSource.Play();
+    }
+
+    public void BgmStop()
+    {
+        bgmAudioSource.Stop();
+    }
+
+    public void BgmPause()
+    {
+        bgmAudioSource.Pause();
     }
 
     public void SfxPlay(int index, float volume) // 0은 클릭, 1은 블록 터뜨리기, 2는 게임 끝
