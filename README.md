@@ -2,6 +2,11 @@
 ## + = 10
 숫자 퍼즐을 선택해 합이 10이 되게 만드는 퍼즐 게임입니다.
 
+<div>
+<img width="30%" src="https://user-images.githubusercontent.com/67315989/205558316-c417a220-ca9c-4893-bac1-eeeb2049c333.png">
+<img width="30%" src="https://user-images.githubusercontent.com/67315989/205558429-c425f617-b60b-40db-b807-2ef8afea98e7.png">
+</div>
+
 ## 💻 개발 기간
 2022년 10월 21일 ~ 2022년 12월 5일
 
