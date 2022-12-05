@@ -21,3 +21,6 @@
 ## 다운로드
 [Make 10 Puzzle](https://drive.google.com/file/d/1WH4-NMViPB7Uu5oSvRwSxvCRn3SOdSFL/view?usp=sharing)
 (압축 풀기 후 exe 실행)
+
+## 플레이 영상
+[📼](https://youtu.be/f-gfSWy7cSg)
