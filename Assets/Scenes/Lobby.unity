@@ -940,11 +940,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmAudioSource: {fileID: 253584858}
   sfxAudioSource: {fileID: 2144444818}
-  bgm: {fileID: 8300000, guid: 3c50558e6c34b54488983b599153ad8c, type: 3}
+  bgm: {fileID: 8300000, guid: c49d7716ab9f4ca43b1e11cd911a1a36, type: 3}
   sfx:
   - {fileID: 8300000, guid: a4e9a995fc9d65b4ab57519eda0abc87, type: 3}
   - {fileID: 8300000, guid: 1321378f15d3ece41ba8c0e919cc1d02, type: 3}
   - {fileID: 8300000, guid: e9d36a32e3b67c64a8de616a1141ffd3, type: 3}
+  bgmVolume: 0.25
 --- !u!4 &1815617245
 Transform:
   m_ObjectHideFlags: 0
