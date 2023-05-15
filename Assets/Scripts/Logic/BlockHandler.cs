@@ -8,29 +8,7 @@ public class BlockHandler : MonoBehaviour
     [SerializeField]
     GameObject blockPrefab;
 
-    public List<GameObject> blockList = new List<GameObject>();
-
-    private static BlockHandler instance = null;
-
-    public static BlockHandler Instance
-    {
-        get
-        {
-            if(instance == null)
-            {
-                return null;
-            }
-            return instance;
-        }
-    }
-
-    void Awake()
-    {
-        if(null == instance)
-        {
-            instance = this;
-        }
-    }
+    private List<GameObject> blockList = new List<GameObject>();
 
     void Start()
     {
@@ -69,6 +47,16 @@ public class BlockHandler : MonoBehaviour
             }
             blockList.Clear();
         }
+    }
+
+    public void AddBlock(GameObject block)
+    {
+        blockList.Add(block);
+    }
+
+    public void RemoveBlock(GameObject block)
+    {
+        blockList.Remove(block);
     }
 
 }
