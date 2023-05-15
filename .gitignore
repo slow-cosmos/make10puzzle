@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-MyCosmos/[Ll]ibrary/
-MyCosmos/[Tt]emp/
-MyCosmos/[Oo]bj/
-MyCosmos/[Bb]uild/
-MyCosmos/[Bb]uilds/
-MyCosmos/[Ll]ogs/
-MyCosmos/[Uu]ser[Ss]ettings/
+make10puzzle/[Ll]ibrary/
+make10puzzle/[Tt]emp/
+make10puzzle/[Oo]bj/
+make10puzzle/[Bb]uild/
+make10puzzle/[Bb]uilds/
+make10puzzle/[Ll]ogs/
+make10puzzle/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
